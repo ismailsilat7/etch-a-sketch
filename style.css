@@ -1,0 +1,29 @@
+
+
+.sketchContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sketchTools {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000000;
+}
+
+.box {
+  flex: 1;
+  aspect-ratio: 1;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
