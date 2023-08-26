@@ -12,18 +12,20 @@ const submit = document.querySelector('.submit');
 
 let gridInitialized = false; // Variable to track if the grid has been initialized
 
-submit.addEventListener ('click',(e) => {
+submit.addEventListener('click', (e) => {
   e.preventDefault();
   const sizeValue = parseInt(sizeInput.value);
   if (sizeValue < 1 || sizeValue > 60 || isNaN(sizeValue)) {
     alert("*Value is out of range (1-60)*");
     sizeInput.value = "";
   } else {
-    if (gridInitialized) {
+    if (!gridInitialized) {
       clearGrid(); // Clear the previous grid if it exists
+      console.log("Clearing grid...");
+      gridInitialized = true; // Set the gridInitialized variable to true
     }
     makeGrid(sizeValue, sizeValue);
-    gridInitialized = true; // Set the gridInitialized variable to true
+    gridInitialized = false; // Set the gridInitialized variable to true
   }
 });
 
