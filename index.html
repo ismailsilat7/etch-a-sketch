@@ -8,6 +8,7 @@
   <title>Etch A Sketch</title>
 </head>
 <body>
+  <!-- Header Section -->
   <div class="headContent">
     <div class="header">
       <h1>Etch A Sketch</h1>
@@ -15,10 +16,12 @@
       <button class="start" onclick="scrollToSize()">Start Sketching</button>
     </div>
   </div>
+
+  <!-- Form Section -->
   <div class="form" id="form-container">
     <form id="sizeForm">
       <label for="size">Enter Sketch Grid Size</label>
-      <input type="text" id="size" name="size" list="sizes" placeholder="Range : 1 - 60">
+      <input type="text" id="size" name="size" list="sizes" placeholder="Range: 1 - 60">
       <datalist id="sizes">
         <option value="8">
         <option value="16">
@@ -29,23 +32,29 @@
       <button type="submit" class="submit" onclick="scrollToSketch()">Submit</button>
     </form>
   </div>
+
+  <!-- Sketch Pad Section -->
   <div class="sketchPad">
     <div class="sketchHeading">
       <h2 class="sketchHead">Sketch-Pad<span class="dimensions">(16x16)</span></h2>
     </div>
     <div class="sketchContainer">
+      <!-- Sketch Tools Section -->
       <div class="sketchTools" id="sketch-section">
         <input type="color" class="c-picker">
         <button onclick="sketchMode = 'classic'">Classic</button>
         <button onclick="sketchMode = 'rainbow'">Rainbow</button>
         <button onclick="sketchMode = 'eraser'">Eraser</button>
-        <button onclick="clearGrid()" >Clear</button>
+        <button onclick="clearGrid()">Clear</button>
         <button onclick="sketchMode = 'darken'">Darkening</button>
-        <button class="changingSize">Change Size</button>
+        <button class="changingSize" onclick="scrollToSize()">Change Size</button>
       </div>
+      <!-- Grid Container -->
       <div class="gridContainer"></div>
     </div>
   </div>
+
+  <!-- Footer Section -->
   <div class="footer">Copyright &copy; Ismail Silat &middot; The Odin Project 2023</div>
 </body>
 </html>
