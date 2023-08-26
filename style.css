@@ -1,4 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/* Reset some default margin and padding for consistency */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
+/* Apply a background color and some basic styles to the body */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Style the main content container */
+.headContent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+/* Style the header */
+.header {
+  text-align: center;
+  margin-bottom: 20px; /* Add some spacing between header and form */
+}
+
+/* Style the header text */
+.header > h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #333; /* You can choose your preferred color */
+}
+
+.header > h3 {
+  font-size: 18px;
+  color: #666; /* You can choose your preferred color */
+}
+
+.start, .submit {
+  margin: 25px;
+  color: white;
+  background-color: #333;
+  border-color: #666;
+  border-radius: 6px;
+  border: 2px solid white;
+  padding: 8px 24px;
+  font-size: 18px;
+  max-width: max-content;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.start:hover, .submit:hover {
+  background-color: #666;
+  cursor: pointer; /* Change cursor on hover for better UX */
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.submit {
+  margin-top: 0px;
+}
+
+#sizeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#size {
+  width: 250px;
+}
+
+label {
+  color: #333;
+  font-size: 35px;
+}
+
+#sizeForm > input {
+  font-size: 25px;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: rgb(0, 0, 0);
+  border: solid 2px rgb(0, 0, 0);
+  padding: 1px 15px;
+  margin: 25px;
+  width: 300px;
+}
+
+#sizeForm > input:focus {
+  outline: none;
+  border: solid 2px rgb(255, 255, 255);
+  box-shadow: 0 0 8px 3px rgb(136, 136, 136);
+  transition: all ease 0.2s;
+}
+
+.sketchPad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sketchHead {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.dimensions {
+  font-size: 25px;
+}
 
 .sketchContainer {
   display:flex;
@@ -9,14 +135,66 @@
 .sketchTools {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px 50px;
+  background-color: #666;
+}
+
+.sketchTools > button {
+  color: white;
+  background-color: #333;
+  border-color: #666;
+  border-radius: 6px;
+  border: 2px solid #666;
+  padding: 8px 24px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 5px;
+}
+
+.c-picker {
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;  
+  border: solid 2px #666;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  align-self: center;
+  transition: all ease 0.3s;
+  margin-bottom: 15px;
+}
+
+.c-picker::-webkit-color-swatch-wrapper {
+  padding: 0; 
+  border: none; 
+}
+
+.c-picker::-webkit-color-swatch {
+  border: none; 
+  border-radius: 50%;
+}
+
+.c-picker:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.sketchTools > button:hover {
+  background-color: #1b1b1b;
+  cursor: pointer; /* Change cursor on hover for better UX */
+  transform: scale(1.1); /* Slightly increase size on hover */
 }
 
 .gridContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   border: 2px solid #000000;
 }
 
@@ -26,4 +204,13 @@
   background-color: white;
   border: 1px solid #ddd;
   box-sizing: border-box;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #333;
 }
