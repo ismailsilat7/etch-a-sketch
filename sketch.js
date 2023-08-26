@@ -9,7 +9,7 @@ colorPicker.addEventListener('input', (e) => {
 });
 const sizeInput = document.querySelector('#size');
 const submit = document.querySelector('.submit');
-
+sizeInput.value = "16";
 let gridInitialized = false; // Variable to track if the grid has been initialized
 
 submit.addEventListener('click', (e) => {
@@ -20,10 +20,11 @@ submit.addEventListener('click', (e) => {
     sizeInput.value = "";
   } else {
     if (!gridInitialized) {
-      clearGrid(); // Clear the previous grid if it exists
-      console.log("Clearing grid...");
+      clearGridForNewSize(); // Clear the previous grid if it exists
       gridInitialized = true; // Set the gridInitialized variable to true
     }
+    gridRow = sizeValue;
+    gridCol = sizeValue;
     makeGrid(sizeValue, sizeValue);
     gridInitialized = false; // Set the gridInitialized variable to true
   }
@@ -77,6 +78,13 @@ function randomColor() {
 }
 
 function clearGrid() {
+  const boxes = document.querySelectorAll('.box');
+  boxes.forEach((box) => {
+    box.style.backgroundColor = 'white';
+  });
+}
+
+function clearGridForNewSize() {
   const gridContainer = document.querySelector('.gridContainer');
   gridContainer.innerHTML = ''; // Remove all child elements (boxes)
 }
