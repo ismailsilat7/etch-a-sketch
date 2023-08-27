@@ -55,8 +55,8 @@ function makeGrid(gridRow, gridCol) {
       box.addEventListener('mouseover', () => {
         switch (sketchMode) {
           case 'classic':
-            box.style.backgroundColor = 'black';
-            colorPicker.value = 'black';
+            box.style.backgroundColor = '#000000';
+            colorPicker.value = '#000000';
             colorPicker.style.boxShadow = `0px 0px 10px 5px ${hexToRgba('#000000', 0.2)}`;
             break;
           case 'rainbow':
